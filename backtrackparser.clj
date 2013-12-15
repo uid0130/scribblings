@@ -32,8 +32,9 @@
      :else
      false)))
 
-(defn parser [stack-trace tokens]
+(defn parser
   "backtrack parser"
+  [stack-trace tokens]
   (defn lecur [stack tokens cc]
     (if stack-trace (println (str stack)))
     (ccond
